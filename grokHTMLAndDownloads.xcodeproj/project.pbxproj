@@ -16,6 +16,7 @@
 		CF1E68731BCC028D0085578C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1E68711BCC028D0085578C /* LaunchScreen.storyboard */; };
 		CF1E687E1BCC028D0085578C /* grokHTMLAndDownloadsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E687D1BCC028D0085578C /* grokHTMLAndDownloadsTests.swift */; };
 		CF1E68891BCC028D0085578C /* grokHTMLAndDownloadsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E68881BCC028D0085578C /* grokHTMLAndDownloadsUITests.swift */; };
+		CF1E68991BCC03740085578C /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E68981BCC03740085578C /* Chart.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		CF1E68841BCC028D0085578C /* grokHTMLAndDownloadsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = grokHTMLAndDownloadsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF1E68881BCC028D0085578C /* grokHTMLAndDownloadsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = grokHTMLAndDownloadsUITests.swift; sourceTree = "<group>"; };
 		CF1E688A1BCC028D0085578C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF1E68981BCC03740085578C /* Chart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				CF1E68661BCC028D0085578C /* AppDelegate.swift */,
 				CF1E68681BCC028D0085578C /* MasterViewController.swift */,
 				CF1E686A1BCC028D0085578C /* DetailViewController.swift */,
+				CF1E68981BCC03740085578C /* Chart.swift */,
 				CF1E686C1BCC028D0085578C /* Main.storyboard */,
 				CF1E686F1BCC028D0085578C /* Assets.xcassets */,
 				CF1E68711BCC028D0085578C /* LaunchScreen.storyboard */,
@@ -333,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF1E68991BCC03740085578C /* Chart.swift in Sources */,
 				CF1E686B1BCC028D0085578C /* DetailViewController.swift in Sources */,
 				CF1E68691BCC028D0085578C /* MasterViewController.swift in Sources */,
 				CF1E68671BCC028D0085578C /* AppDelegate.swift in Sources */,
