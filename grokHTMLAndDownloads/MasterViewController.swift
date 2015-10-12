@@ -9,8 +9,15 @@
 import UIKit
 
 class MasterViewController: UITableViewController {
-  var detailViewController: DetailViewController? = nil
   var dataController = DataController()
+  
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    dataController.fetchCharts { _ in
+      // TODO: handle errors
+      self.tableView.reloadData()
+    }
+  }
 
   // MARK: - Table View
 
@@ -26,7 +33,7 @@ class MasterViewController: UITableViewController {
     let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
 
     if let chart = dataController.chartAtIndex(indexPath.row) {
-      cell.textLabel!.text = chart.title
+      cell.textLabel!.text = "\(chart.number): \(chart.title)"
     } else {
       cell.textLabel!.text = ""
     }

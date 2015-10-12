@@ -15,10 +15,6 @@ let URLString = "http://www.charts.noaa.gov/PDFs/PDFs.shtml"
 class DataController {
   var charts: [Chart]?
   
-  init() {
-    fetchCharts()
-  }
-  
   func chartsCount() -> Int {
     return charts?.count ?? 0
   }
@@ -27,13 +23,13 @@ class DataController {
     guard let charts = charts else {
       return nil
     }
-    guard index < 0 || index >= charts.count else {
+    guard index >= 0 || index < charts.count else {
       return nil
     }
     return charts[index]
   }
   
-  func fetchCharts() {
+  func fetchCharts(completionHandler: (NSError?) -> Void) {
     Alamofire.request(.GET, URLString)
       .responseString { responseString in
         if let htmlAsString = responseString.result.value {
@@ -81,6 +77,8 @@ class DataController {
             }
           }
         }
+        // TODO: bubble up errors
+        completionHandler(nil)
     }
   }
 }
