@@ -19,6 +19,20 @@ class DataController {
     fetchCharts()
   }
   
+  func chartsCount() -> Int {
+    return charts?.count ?? 0
+  }
+  
+  func chartAtIndex(index: Int) -> Chart? {
+    guard let charts = charts else {
+      return nil
+    }
+    guard index < 0 || index >= charts.count else {
+      return nil
+    }
+    return charts[index]
+  }
+  
   func fetchCharts() {
     Alamofire.request(.GET, URLString)
       .responseString { responseString in
