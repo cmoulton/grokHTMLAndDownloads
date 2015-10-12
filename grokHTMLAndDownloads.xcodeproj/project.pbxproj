@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A8000D7B8D4F0B08A91B9564 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C074CE47BB5D742A384D61D /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		CF1E68671BCC028D0085578C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E68661BCC028D0085578C /* AppDelegate.swift */; };
+		CF1E68691BCC028D0085578C /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E68681BCC028D0085578C /* MasterViewController.swift */; };
+		CF1E686B1BCC028D0085578C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E686A1BCC028D0085578C /* DetailViewController.swift */; };
+		CF1E686E1BCC028D0085578C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1E686C1BCC028D0085578C /* Main.storyboard */; };
+		CF1E68701BCC028D0085578C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF1E686F1BCC028D0085578C /* Assets.xcassets */; };
+		CF1E68731BCC028D0085578C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1E68711BCC028D0085578C /* LaunchScreen.storyboard */; };
+		CF1E687E1BCC028D0085578C /* grokHTMLAndDownloadsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E687D1BCC028D0085578C /* grokHTMLAndDownloadsTests.swift */; };
+		CF1E68891BCC028D0085578C /* grokHTMLAndDownloadsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E68881BCC028D0085578C /* grokHTMLAndDownloadsUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CF1E687A1BCC028D0085578C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF1E685B1BCC028D0085578C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF1E68621BCC028D0085578C;
+			remoteInfo = grokHTMLAndDownloads;
+		};
+		CF1E68851BCC028D0085578C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF1E685B1BCC028D0085578C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF1E68621BCC028D0085578C;
+			remoteInfo = grokHTMLAndDownloads;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4C074CE47BB5D742A384D61D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B27C4FFE33CC50384492C19C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CB0812A4F6067F490C7A846A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		CF1E68631BCC028D0085578C /* grokHTMLAndDownloads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grokHTMLAndDownloads.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF1E68661BCC028D0085578C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CF1E68681BCC028D0085578C /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		CF1E686A1BCC028D0085578C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CF1E686D1BCC028D0085578C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CF1E686F1BCC028D0085578C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF1E68721BCC028D0085578C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CF1E68741BCC028D0085578C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF1E68791BCC028D0085578C /* grokHTMLAndDownloadsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = grokHTMLAndDownloadsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF1E687D1BCC028D0085578C /* grokHTMLAndDownloadsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = grokHTMLAndDownloadsTests.swift; sourceTree = "<group>"; };
+		CF1E687F1BCC028D0085578C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF1E68841BCC028D0085578C /* grokHTMLAndDownloadsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = grokHTMLAndDownloadsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF1E68881BCC028D0085578C /* grokHTMLAndDownloadsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = grokHTMLAndDownloadsUITests.swift; sourceTree = "<group>"; };
+		CF1E688A1BCC028D0085578C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF1E68601BCC028D0085578C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8000D7B8D4F0B08A91B9564 /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF1E68761BCC028D0085578C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF1E68811BCC028D0085578C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F479149AD87B334D81DCE53 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C074CE47BB5D742A384D61D /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5FBEBF5F8263BA0AF127D524 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CB0812A4F6067F490C7A846A /* Pods.debug.xcconfig */,
+				B27C4FFE33CC50384492C19C /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF1E685A1BCC028D0085578C = {
+			isa = PBXGroup;
+			children = (
+				CF1E68651BCC028D0085578C /* grokHTMLAndDownloads */,
+				CF1E687C1BCC028D0085578C /* grokHTMLAndDownloadsTests */,
+				CF1E68871BCC028D0085578C /* grokHTMLAndDownloadsUITests */,
+				CF1E68641BCC028D0085578C /* Products */,
+				5FBEBF5F8263BA0AF127D524 /* Pods */,
+				2F479149AD87B334D81DCE53 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CF1E68641BCC028D0085578C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF1E68631BCC028D0085578C /* grokHTMLAndDownloads.app */,
+				CF1E68791BCC028D0085578C /* grokHTMLAndDownloadsTests.xctest */,
+				CF1E68841BCC028D0085578C /* grokHTMLAndDownloadsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1E68651BCC028D0085578C /* grokHTMLAndDownloads */ = {
+			isa = PBXGroup;
+			children = (
+				CF1E68661BCC028D0085578C /* AppDelegate.swift */,
+				CF1E68681BCC028D0085578C /* MasterViewController.swift */,
+				CF1E686A1BCC028D0085578C /* DetailViewController.swift */,
+				CF1E686C1BCC028D0085578C /* Main.storyboard */,
+				CF1E686F1BCC028D0085578C /* Assets.xcassets */,
+				CF1E68711BCC028D0085578C /* LaunchScreen.storyboard */,
+				CF1E68741BCC028D0085578C /* Info.plist */,
+			);
+			path = grokHTMLAndDownloads;
+			sourceTree = "<group>";
+		};
+		CF1E687C1BCC028D0085578C /* grokHTMLAndDownloadsTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF1E687D1BCC028D0085578C /* grokHTMLAndDownloadsTests.swift */,
+				CF1E687F1BCC028D0085578C /* Info.plist */,
+			);
+			path = grokHTMLAndDownloadsTests;
+			sourceTree = "<group>";
+		};
+		CF1E68871BCC028D0085578C /* grokHTMLAndDownloadsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CF1E68881BCC028D0085578C /* grokHTMLAndDownloadsUITests.swift */,
+				CF1E688A1BCC028D0085578C /* Info.plist */,
+			);
+			path = grokHTMLAndDownloadsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF1E68621BCC028D0085578C /* grokHTMLAndDownloads */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF1E688D1BCC028D0085578C /* Build configuration list for PBXNativeTarget "grokHTMLAndDownloads" */;
+			buildPhases = (
+				64EA6EEF95217693C0A7F5EB /* Check Pods Manifest.lock */,
+				CF1E685F1BCC028D0085578C /* Sources */,
+				CF1E68601BCC028D0085578C /* Frameworks */,
+				CF1E68611BCC028D0085578C /* Resources */,
+				75EAFE2D2CB289417FCABC57 /* Embed Pods Frameworks */,
+				FA0880A59353D088752F57C8 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = grokHTMLAndDownloads;
+			productName = grokHTMLAndDownloads;
+			productReference = CF1E68631BCC028D0085578C /* grokHTMLAndDownloads.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CF1E68781BCC028D0085578C /* grokHTMLAndDownloadsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF1E68901BCC028D0085578C /* Build configuration list for PBXNativeTarget "grokHTMLAndDownloadsTests" */;
+			buildPhases = (
+				CF1E68751BCC028D0085578C /* Sources */,
+				CF1E68761BCC028D0085578C /* Frameworks */,
+				CF1E68771BCC028D0085578C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF1E687B1BCC028D0085578C /* PBXTargetDependency */,
+			);
+			name = grokHTMLAndDownloadsTests;
+			productName = grokHTMLAndDownloadsTests;
+			productReference = CF1E68791BCC028D0085578C /* grokHTMLAndDownloadsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CF1E68831BCC028D0085578C /* grokHTMLAndDownloadsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF1E68931BCC028D0085578C /* Build configuration list for PBXNativeTarget "grokHTMLAndDownloadsUITests" */;
+			buildPhases = (
+				CF1E68801BCC028D0085578C /* Sources */,
+				CF1E68811BCC028D0085578C /* Frameworks */,
+				CF1E68821BCC028D0085578C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF1E68861BCC028D0085578C /* PBXTargetDependency */,
+			);
+			name = grokHTMLAndDownloadsUITests;
+			productName = grokHTMLAndDownloadsUITests;
+			productReference = CF1E68841BCC028D0085578C /* grokHTMLAndDownloadsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF1E685B1BCC028D0085578C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Teak Mobile Inc";
+				TargetAttributes = {
+					CF1E68621BCC028D0085578C = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					CF1E68781BCC028D0085578C = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = CF1E68621BCC028D0085578C;
+					};
+					CF1E68831BCC028D0085578C = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = CF1E68621BCC028D0085578C;
+					};
+				};
+			};
+			buildConfigurationList = CF1E685E1BCC028D0085578C /* Build configuration list for PBXProject "grokHTMLAndDownloads" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1E685A1BCC028D0085578C;
+			productRefGroup = CF1E68641BCC028D0085578C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF1E68621BCC028D0085578C /* grokHTMLAndDownloads */,
+				CF1E68781BCC028D0085578C /* grokHTMLAndDownloadsTests */,
+				CF1E68831BCC028D0085578C /* grokHTMLAndDownloadsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF1E68611BCC028D0085578C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF1E68731BCC028D0085578C /* LaunchScreen.storyboard in Resources */,
+				CF1E68701BCC028D0085578C /* Assets.xcassets in Resources */,
+				CF1E686E1BCC028D0085578C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF1E68771BCC028D0085578C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF1E68821BCC028D0085578C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		64EA6EEF95217693C0A7F5EB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		75EAFE2D2CB289417FCABC57 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA0880A59353D088752F57C8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF1E685F1BCC028D0085578C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF1E686B1BCC028D0085578C /* DetailViewController.swift in Sources */,
+				CF1E68691BCC028D0085578C /* MasterViewController.swift in Sources */,
+				CF1E68671BCC028D0085578C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF1E68751BCC028D0085578C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF1E687E1BCC028D0085578C /* grokHTMLAndDownloadsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF1E68801BCC028D0085578C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF1E68891BCC028D0085578C /* grokHTMLAndDownloadsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF1E687B1BCC028D0085578C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF1E68621BCC028D0085578C /* grokHTMLAndDownloads */;
+			targetProxy = CF1E687A1BCC028D0085578C /* PBXContainerItemProxy */;
+		};
+		CF1E68861BCC028D0085578C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF1E68621BCC028D0085578C /* grokHTMLAndDownloads */;
+			targetProxy = CF1E68851BCC028D0085578C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CF1E686C1BCC028D0085578C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF1E686D1BCC028D0085578C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CF1E68711BCC028D0085578C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF1E68721BCC028D0085578C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CF1E688B1BCC028D0085578C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CF1E688C1BCC028D0085578C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF1E688E1BCC028D0085578C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB0812A4F6067F490C7A846A /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = grokHTMLAndDownloads/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.teakmobile.grokswift.grokHTMLAndDownloads;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CF1E688F1BCC028D0085578C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B27C4FFE33CC50384492C19C /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = grokHTMLAndDownloads/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.teakmobile.grokswift.grokHTMLAndDownloads;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CF1E68911BCC028D0085578C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = grokHTMLAndDownloadsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.teakmobile.grokswift.grokHTMLAndDownloadsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/grokHTMLAndDownloads.app/grokHTMLAndDownloads";
+			};
+			name = Debug;
+		};
+		CF1E68921BCC028D0085578C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = grokHTMLAndDownloadsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.teakmobile.grokswift.grokHTMLAndDownloadsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/grokHTMLAndDownloads.app/grokHTMLAndDownloads";
+			};
+			name = Release;
+		};
+		CF1E68941BCC028D0085578C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = grokHTMLAndDownloadsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.teakmobile.grokswift.grokHTMLAndDownloadsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = grokHTMLAndDownloads;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		CF1E68951BCC028D0085578C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = grokHTMLAndDownloadsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.teakmobile.grokswift.grokHTMLAndDownloadsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = grokHTMLAndDownloads;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF1E685E1BCC028D0085578C /* Build configuration list for PBXProject "grokHTMLAndDownloads" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF1E688B1BCC028D0085578C /* Debug */,
+				CF1E688C1BCC028D0085578C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF1E688D1BCC028D0085578C /* Build configuration list for PBXNativeTarget "grokHTMLAndDownloads" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF1E688E1BCC028D0085578C /* Debug */,
+				CF1E688F1BCC028D0085578C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF1E68901BCC028D0085578C /* Build configuration list for PBXNativeTarget "grokHTMLAndDownloadsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF1E68911BCC028D0085578C /* Debug */,
+				CF1E68921BCC028D0085578C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF1E68931BCC028D0085578C /* Build configuration list for PBXNativeTarget "grokHTMLAndDownloadsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF1E68941BCC028D0085578C /* Debug */,
+				CF1E68951BCC028D0085578C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF1E685B1BCC028D0085578C /* Project object */;
+}
