@@ -111,4 +111,33 @@ class DataController {
         completionHandler(nil)
     }
   }
+  
+  func isChartDownloaded(chart: Chart) -> Bool {
+    if let path = chart.urlInDocumentsDirectory?.path {
+      let fileManager = NSFileManager.defaultManager()
+      return fileManager.fileExistsAtPath(path)
+    }
+    return false
+  }
+  
+  func downloadChart(chart: Chart, completionHandler: (Double?, NSError?) -> Void) {
+    guard isChartDownloaded(chart) == false else {
+      completionHandler(1.0, nil) // already have it
+      return
+    }
+    
+    let destination = Alamofire.Request.suggestedDownloadDestination(directory: .DocumentDirectory, domain: .UserDomainMask)
+    Alamofire.download(.GET, chart.url, destination: destination)
+      .progress { bytesRead, totalBytesRead, totalBytesExpectedToRead in
+        print(totalBytesRead)
+        dispatch_async(dispatch_get_main_queue()) {
+          let progress = Double(totalBytesRead) / Double(totalBytesExpectedToRead)
+          completionHandler(progress, nil)
+        }
+      }
+      .responseString { response in
+        print(response.result.error)
+    }
+    
+  }
 }
