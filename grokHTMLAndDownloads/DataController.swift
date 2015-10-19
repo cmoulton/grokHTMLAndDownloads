@@ -89,7 +89,7 @@ class DataController {
   func fetchCharts(completionHandler: (NSError?) -> Void) {
     Alamofire.request(.GET, URLString)
       .responseString { responseString in
-        guard responseString.result.error != nil else {
+        guard responseString.result.error == nil else {
           completionHandler(responseString.result.error!)
           return
 
@@ -130,7 +130,7 @@ class DataController {
           }
         }
         completionHandler(nil)
-    }
+      }
   }
   
   func isChartDownloaded(chart: Chart) -> Bool {
