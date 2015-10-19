@@ -47,26 +47,24 @@ class DataController {
     var title: String?
     // first column: URL and number
     if let firstColumn = rowElement.childAtIndex(1) as? HTMLElement {
+      print(firstColumn.textContent)
       // skip the first row, or any other where the first row doesn't contain a number
-      if let entry = firstColumn.childAtIndex(1) as? HTMLElement {
-        if let urlNode = entry.firstNodeMatchingSelector("a") {
-          if let urlString = urlNode.objectForKeyedSubscript("href") as? String {
-            url = NSURL(string: urlString)
-          }
+      if let urlNode = firstColumn.firstNodeMatchingSelector("a") {
+        if let urlString = urlNode.objectForKeyedSubscript("href") as? String {
+          url = NSURL(string: urlString)
         }
-        if (firstColumn.children.count > 1) {
-          let contents = firstColumn.childAtIndex(1).textContent
-          // need to make sure it's a number
-          number = Int(contents)
-        }
-        if (url == nil || number == nil) {
-         return nil // can't do anything without a URL, e.g., the header row
-        }
+        // need to make sure it's a number
+        number = Int(firstColumn.textContent)
       }
+    }
+    if (url == nil || number == nil) {
+      return nil // can't do anything without a URL, e.g., the header row
     }
     
     if let secondColumn = rowElement.childAtIndex(3) as? HTMLElement {
+      print(secondColumn.textContent)
       if let entry = secondColumn.childAtIndex(1) as? HTMLElement {
+        print(entry.textContent)
         scale = Int(entry.textContent.stringByReplacingOccurrencesOfString(",", withString: ""))
       }
     }
