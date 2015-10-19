@@ -29,85 +29,106 @@ class DataController {
     return charts[index]
   }
   
+  private func isChartsTable(tableElement: HTMLElement) -> Bool {
+    if tableElement.children.count > 0 {
+      let firstChild = tableElement.childAtIndex(0)
+      let lowerCaseContent = firstChild.textContent.lowercaseString
+      if lowerCaseContent.containsString("number") && lowerCaseContent.containsString("scale") && lowerCaseContent.containsString("title") {
+        return true
+      }
+    }
+    return false
+  }
+  
+  private func parseHTMLRow(rowElement: HTMLElement) -> Chart? {
+    var url: NSURL?
+    var number: Int?
+    var scale: Int?
+    var title: String?
+    // first column: URL and number
+    if let firstColumn = rowElement.childAtIndex(1) as? HTMLElement {
+      // skip the first row, or any other where the first row doesn't contain a number
+      if let entry = firstColumn.childAtIndex(1) as? HTMLElement {
+        if let urlNode = entry.firstNodeMatchingSelector("a") {
+          if let urlString = urlNode.objectForKeyedSubscript("href") as? String {
+            url = NSURL(string: urlString)
+          }
+        }
+        if (firstColumn.children.count > 1) {
+          let contents = firstColumn.childAtIndex(1).textContent
+          // need to make sure it's a number
+          number = Int(contents)
+        }
+        if (url == nil || number == nil) {
+         return nil // can't do anything without a URL, e.g., the header row
+        }
+      }
+    }
+    
+    if let secondColumn = rowElement.childAtIndex(3) as? HTMLElement {
+      if let entry = secondColumn.childAtIndex(1) as? HTMLElement {
+        scale = Int(entry.textContent.stringByReplacingOccurrencesOfString(",", withString: ""))
+      }
+    }
+    // third column: Name
+    if let thirdColumn = rowElement.childAtIndex(5) as? HTMLElement {
+      if let entry = thirdColumn.childAtIndex(1) as? HTMLElement {
+        var titleString = entry.textContent
+        // strip out linebreaks and repeated spaces that occur in some titles
+        titleString = titleString.stringByReplacingOccurrencesOfString("  ", withString: " ")
+        title = titleString.stringByReplacingOccurrencesOfString("\n", withString: "")
+      }
+    }
+    
+    if let title = title, url = url, number = number, scale = scale {
+      return Chart(title: title, url: url, number: number, scale: scale)
+    }
+    return nil
+  }
+  
   func fetchCharts(completionHandler: (NSError?) -> Void) {
     Alamofire.request(.GET, URLString)
       .responseString { responseString in
-        if let htmlAsString = responseString.result.value {
-          // TODO checks from Alamofire page
-          let doc = HTMLDocument(string: htmlAsString)
-          
-          // find the table of charts in the HTML
-          let tables = doc.nodesMatchingSelector("tbody")
-          var chartsTable:HTMLElement?
-          for table in tables {
-            if let tableElement = table as? HTMLElement {
-              if tableElement.children.count > 0 {
-                let firstChild = tableElement.childAtIndex(0)
-                let lowerCaseContent = firstChild.textContent.lowercaseString
-                if lowerCaseContent.containsString("number") && lowerCaseContent.containsString("scale") && lowerCaseContent.containsString("title") {
-                  chartsTable = tableElement
-                  break;
-                }
-              }
-            }
-          }
-          // make sure we found the table of charts
-          guard let tableContents = chartsTable else {
-            // TODO: error
-            completionHandler(nil)
-            return
-          }
-          
-          self.charts = []
-          for row in tableContents.children {
-            var url: NSURL?
-            var number: Int?
-            var scale: Int?
-            var title: String?
-            if let rowElement = row as? HTMLElement { // TODO: should be able to combine this with loop above
-              // first column: URL and number
-              if let firstColumn = rowElement.childAtIndex(1) as? HTMLElement {
-                // skip the first row, or any other where the first row doesn't contain a number
-                if let entry = firstColumn.childAtIndex(1) as? HTMLElement {
-                  if let urlNode = entry.firstNodeMatchingSelector("a") {
-                    if let urlString = urlNode.objectForKeyedSubscript("href") as? String {
-                      url = NSURL(string: urlString)
-                    }
-                  }
-                  if (firstColumn.children.count > 1) {
-                    let contents = firstColumn.childAtIndex(1).textContent
-                    // need to make sure it's a number
-                    number = Int(contents)
-                  }
-                  if (url == nil || number == nil) {
-                    continue // can't do anything without a URL, e.g., the header row
-                  }
-                }
-              }
-              
-              if let secondColumn = rowElement.childAtIndex(3) as? HTMLElement {
-                if let entry = secondColumn.childAtIndex(1) as? HTMLElement {
-                  scale = Int(entry.textContent.stringByReplacingOccurrencesOfString(",", withString: ""))
-                }
-              }
-              // third column: Name
-              if let thirdColumn = rowElement.childAtIndex(5) as? HTMLElement {
-                if let entry = thirdColumn.childAtIndex(1) as? HTMLElement {
-                  var titleString = entry.textContent
-                  // strip out linebreaks and repeated spaces that occur in some titles
-                  titleString = titleString.stringByReplacingOccurrencesOfString("  ", withString: " ")
-                  title = titleString.stringByReplacingOccurrencesOfString("\n", withString: "")
-                }
-              }
-              
-              if let title = title, url = url, number = number, scale = scale {
-                let newChart = Chart(title: title, url: url, number: number, scale: scale)
-                self.charts?.append(newChart)
-              }
+        guard responseString.result.error != nil else {
+          completionHandler(responseString.result.error!)
+          return
+
+        }
+        guard let htmlAsString = responseString.result.value else {
+          let error = Error.errorWithCode(.StringSerializationFailed, failureReason: "Could not get HTML as String")
+          completionHandler(error)
+          return
+        }
+        // TODO checks from Alamofire page, bubble up errors
+        let doc = HTMLDocument(string: htmlAsString)
+        
+        // find the table of charts in the HTML
+        let tables = doc.nodesMatchingSelector("tbody")
+        var chartsTable:HTMLElement?
+        for table in tables {
+          if let tableElement = table as? HTMLElement {
+            if self.isChartsTable(tableElement) {
+              chartsTable = tableElement
+              break
             }
           }
         }
-        // TODO: bubble up errors
+        // make sure we found the table of charts
+        guard let tableContents = chartsTable else {
+          // TODO: create error
+          let error = Error.errorWithCode(.DataSerializationFailed, failureReason: "Could not find charts table in HTML document")
+          completionHandler(error)
+          return
+        }
+        
+        self.charts = []
+        for row in tableContents.children {
+          if let rowElement = row as? HTMLElement { // TODO: should be able to combine this with loop above
+            if let newChart = self.parseHTMLRow(rowElement) {
+              self.charts?.append(newChart)
+            }
+          }
+        }
         completionHandler(nil)
     }
   }
