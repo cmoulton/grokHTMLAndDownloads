@@ -47,10 +47,6 @@ class MasterViewController: UITableViewController, UIDocumentInteractionControll
       dataController.downloadChart(chart) { progress, error in
         // TODO: handle error
         print(progress)
-        if var progressValueToDisplay = progress {
-          progressValueToDisplay = 100*progressValueToDisplay
-          self.navigationItem.prompt = String(Int(progressValueToDisplay))
-        }
         print(error)
         if (progress == 1.0) {
           if let filename = chart.filename {
