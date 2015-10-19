@@ -27,13 +27,13 @@ class MasterViewController: UITableViewController, UIDocumentInteractionControll
   }
   
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return dataController.chartsCount()
+    return dataController.charts?.count ?? 0
   }
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
     
-    if let chart = dataController.chartAtIndex(indexPath.row) {
+    if let chart = dataController.charts?[indexPath.row] {
       cell.textLabel!.text = "\(chart.number): \(chart.title)"
     } else {
       cell.textLabel!.text = ""
@@ -43,7 +43,7 @@ class MasterViewController: UITableViewController, UIDocumentInteractionControll
   }
   
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    if let chart = dataController.chartAtIndex(indexPath.row) {
+    if let chart = dataController.charts?[indexPath.row] {
       dataController.downloadChart(chart) { progress, error in
         // TODO: handle error
         print(progress)
@@ -71,7 +71,6 @@ class MasterViewController: UITableViewController, UIDocumentInteractionControll
   }
   
   // MARK: - UIDocumentInteractionControllerDelegate
-  // did end sending
   func documentInteractionController(controller: UIDocumentInteractionController, didEndSendingToApplication application: String?) {
     self.docController = nil
     if let indexPath = tableView.indexPathForSelectedRow {

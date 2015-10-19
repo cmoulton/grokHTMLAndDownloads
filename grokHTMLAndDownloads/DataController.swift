@@ -14,21 +14,7 @@ let URLString = "http://ocsdata.ncd.noaa.gov/BookletChart/AtlanticCoastBookletCh
 
 class DataController {
   var charts: [Chart]?
-  
-  func chartsCount() -> Int {
-    return charts?.count ?? 0
-  }
-  
-  func chartAtIndex(index: Int) -> Chart? {
-    guard let charts = charts else {
-      return nil
-    }
-    guard index >= 0 || index < charts.count else {
-      return nil
-    }
-    return charts[index]
-  }
-  
+    
   private func isChartsTable(tableElement: HTMLElement) -> Bool {
     if tableElement.children.count > 0 {
       let firstChild = tableElement.childAtIndex(0)
