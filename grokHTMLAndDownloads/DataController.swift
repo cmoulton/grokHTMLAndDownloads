@@ -47,14 +47,14 @@ class DataController {
     var title: String?
     // first column: URL and number
     if let firstColumn = rowElement.childAtIndex(1) as? HTMLElement {
-      print(firstColumn.textContent)
       // skip the first row, or any other where the first row doesn't contain a number
       if let urlNode = firstColumn.firstNodeMatchingSelector("a") {
         if let urlString = urlNode.objectForKeyedSubscript("href") as? String {
           url = NSURL(string: urlString)
         }
         // need to make sure it's a number
-        number = Int(firstColumn.textContent)
+        let textNumber = firstColumn.textContent.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        number = Int(textNumber)
       }
     }
     if (url == nil || number == nil) {
@@ -62,20 +62,16 @@ class DataController {
     }
     
     if let secondColumn = rowElement.childAtIndex(3) as? HTMLElement {
-      print(secondColumn.textContent)
-      if let entry = secondColumn.childAtIndex(1) as? HTMLElement {
-        print(entry.textContent)
-        scale = Int(entry.textContent.stringByReplacingOccurrencesOfString(",", withString: ""))
-      }
+      let text = secondColumn.textContent
+        .stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        .stringByReplacingOccurrencesOfString(",", withString: "")
+      scale = Int(text)
     }
     // third column: Name
     if let thirdColumn = rowElement.childAtIndex(5) as? HTMLElement {
-      if let entry = thirdColumn.childAtIndex(1) as? HTMLElement {
-        var titleString = entry.textContent
-        // strip out linebreaks and repeated spaces that occur in some titles
-        titleString = titleString.stringByReplacingOccurrencesOfString("  ", withString: " ")
-        title = titleString.stringByReplacingOccurrencesOfString("\n", withString: "")
-      }
+      title = thirdColumn.textContent
+        .stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        .stringByReplacingOccurrencesOfString("\n", withString: "")
     }
     
     if let title = title, url = url, number = number, scale = scale {
@@ -156,7 +152,7 @@ class DataController {
       }
       .responseString { response in
         print(response.result.error)
+        completionHandler(nil, response.result.error)
     }
-    
   }
 }
