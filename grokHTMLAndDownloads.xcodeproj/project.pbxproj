@@ -15,8 +15,9 @@
 		CF1E68731BCC028D0085578C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1E68711BCC028D0085578C /* LaunchScreen.storyboard */; };
 		CF1E687E1BCC028D0085578C /* grokHTMLAndDownloadsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E687D1BCC028D0085578C /* grokHTMLAndDownloadsTests.swift */; };
 		CF1E68891BCC028D0085578C /* grokHTMLAndDownloadsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E68881BCC028D0085578C /* grokHTMLAndDownloadsUITests.swift */; };
-		CF1E68971BCC036C0085578C /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E68961BCC036C0085578C /* DataController.swift */; settings = {ASSET_TAGS = (); }; };
-		CF1E68991BCC03740085578C /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E68981BCC03740085578C /* Chart.swift */; settings = {ASSET_TAGS = (); }; };
+		CF1E68971BCC036C0085578C /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E68961BCC036C0085578C /* DataController.swift */; };
+		CF1E68991BCC03740085578C /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E68981BCC03740085578C /* Chart.swift */; };
+		CFADCB8F1C11E86800667830 /* ChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFADCB8E1C11E86800667830 /* ChartCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		CF1E688A1BCC028D0085578C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF1E68961BCC036C0085578C /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		CF1E68981BCC03740085578C /* Chart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
+		CFADCB8E1C11E86800667830 /* ChartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				CF1E68681BCC028D0085578C /* MasterViewController.swift */,
 				CF1E68961BCC036C0085578C /* DataController.swift */,
 				CF1E68981BCC03740085578C /* Chart.swift */,
+				CFADCB8E1C11E86800667830 /* ChartCell.swift */,
 				CF1E686C1BCC028D0085578C /* Main.storyboard */,
 				CF1E686F1BCC028D0085578C /* Assets.xcassets */,
 				CF1E68711BCC028D0085578C /* LaunchScreen.storyboard */,
@@ -337,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF1E68991BCC03740085578C /* Chart.swift in Sources */,
+				CFADCB8F1C11E86800667830 /* ChartCell.swift in Sources */,
 				CF1E68971BCC036C0085578C /* DataController.swift in Sources */,
 				CF1E68691BCC028D0085578C /* MasterViewController.swift in Sources */,
 				CF1E68671BCC028D0085578C /* AppDelegate.swift in Sources */,
