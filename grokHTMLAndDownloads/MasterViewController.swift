@@ -33,10 +33,15 @@ class MasterViewController: UITableViewController, UIDocumentInteractionControll
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
     
-    if let chart = dataController.charts?[indexPath.row] {
-      cell.textLabel!.text = "\(chart.number): \(chart.title)"
-    } else {
-      cell.textLabel!.text = ""
+    if let chartCell = cell as? ChartCell {
+      if let chart = dataController.charts?[indexPath.row] {
+        chartCell.titleLabel.text = "\(chart.number): \(chart.title)"
+        
+        if self.dataController.isChartDownloaded(chart) {
+          // show disclosure indicator if we already have it
+          chartCell.accessoryType = .Checkmark
+        } 
+      }
     }
     
     return cell
@@ -48,6 +53,13 @@ class MasterViewController: UITableViewController, UIDocumentInteractionControll
         // TODO: handle error
         print(progress)
         print(error)
+        if (progress < 1.0) {
+          if let cell = self.tableView.cellForRowAtIndexPath(indexPath), chartCell = cell as? ChartCell, progressValue = progress {
+            chartCell.progressBar.hidden = false
+            chartCell.progressBar.progress = Float(progressValue)
+            chartCell.setNeedsDisplay()
+          }
+        }
         if (progress == 1.0) {
           if let filename = chart.filename {
             let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
@@ -59,6 +71,10 @@ class MasterViewController: UITableViewController, UIDocumentInteractionControll
             self.docController?.delegate = self
             if let cell = self.tableView.cellForRowAtIndexPath(indexPath) {
               self.docController?.presentOptionsMenuFromRect(cell.frame, inView: self.tableView, animated: true)
+              if let chartCell = cell as? ChartCell {
+                chartCell.accessoryType = .Checkmark
+                chartCell.setNeedsDisplay()
+              }
             }
           }
         }
