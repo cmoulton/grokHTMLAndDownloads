@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import HTMLReader
 
-let URLString = "http://ocsdata.ncd.noaa.gov/BookletChart/AtlanticCoastBookletCharts.htm"
+let URLString = "http://charts.noaa.gov/BookletChart/AtlanticCoastBookletCharts.htm"
 
 class DataController {
   var charts: [Chart]?
