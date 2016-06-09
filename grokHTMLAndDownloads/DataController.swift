@@ -86,11 +86,9 @@ class DataController {
         let tables = doc.nodesMatchingSelector("tbody")
         var chartsTable:HTMLElement?
         for table in tables {
-          if let tableElement = table as? HTMLElement {
-            if self.isChartsTable(tableElement) {
-              chartsTable = tableElement
-              break
-            }
+          if self.isChartsTable(table) {
+            chartsTable = table
+            break
           }
         }
         // make sure we found the table of charts
