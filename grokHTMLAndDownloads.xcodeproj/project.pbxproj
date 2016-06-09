@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A8000D7B8D4F0B08A91B9564 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C074CE47BB5D742A384D61D /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		CF1E68671BCC028D0085578C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E68661BCC028D0085578C /* AppDelegate.swift */; };
 		CF1E68691BCC028D0085578C /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E68681BCC028D0085578C /* MasterViewController.swift */; };
 		CF1E686E1BCC028D0085578C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1E686C1BCC028D0085578C /* Main.storyboard */; };
@@ -15,8 +14,9 @@
 		CF1E68731BCC028D0085578C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1E68711BCC028D0085578C /* LaunchScreen.storyboard */; };
 		CF1E687E1BCC028D0085578C /* grokHTMLAndDownloadsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E687D1BCC028D0085578C /* grokHTMLAndDownloadsTests.swift */; };
 		CF1E68891BCC028D0085578C /* grokHTMLAndDownloadsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E68881BCC028D0085578C /* grokHTMLAndDownloadsUITests.swift */; };
-		CF1E68971BCC036C0085578C /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E68961BCC036C0085578C /* DataController.swift */; settings = {ASSET_TAGS = (); }; };
-		CF1E68991BCC03740085578C /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E68981BCC03740085578C /* Chart.swift */; settings = {ASSET_TAGS = (); }; };
+		CF1E68971BCC036C0085578C /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E68961BCC036C0085578C /* DataController.swift */; };
+		CF1E68991BCC03740085578C /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E68981BCC03740085578C /* Chart.swift */; };
+		DB059B0B07ABE0C023783C58 /* Pods_grokHTMLAndDownloads.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77ABAE82B7A3CCF1D45797AB /* Pods_grokHTMLAndDownloads.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +38,8 @@
 
 /* Begin PBXFileReference section */
 		4C074CE47BB5D742A384D61D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B27C4FFE33CC50384492C19C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		CB0812A4F6067F490C7A846A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		520219523C1062D00AA631C0 /* Pods-grokHTMLAndDownloads.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-grokHTMLAndDownloads.debug.xcconfig"; path = "Pods/Target Support Files/Pods-grokHTMLAndDownloads/Pods-grokHTMLAndDownloads.debug.xcconfig"; sourceTree = "<group>"; };
+		77ABAE82B7A3CCF1D45797AB /* Pods_grokHTMLAndDownloads.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_grokHTMLAndDownloads.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF1E68631BCC028D0085578C /* grokHTMLAndDownloads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grokHTMLAndDownloads.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF1E68661BCC028D0085578C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF1E68681BCC028D0085578C /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +55,7 @@
 		CF1E688A1BCC028D0085578C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF1E68961BCC036C0085578C /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		CF1E68981BCC03740085578C /* Chart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
+		E67DB91C874177AC2B9BAD0C /* Pods-grokHTMLAndDownloads.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-grokHTMLAndDownloads.release.xcconfig"; path = "Pods/Target Support Files/Pods-grokHTMLAndDownloads/Pods-grokHTMLAndDownloads.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8000D7B8D4F0B08A91B9564 /* Pods.framework in Frameworks */,
+				DB059B0B07ABE0C023783C58 /* Pods_grokHTMLAndDownloads.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				4C074CE47BB5D742A384D61D /* Pods.framework */,
+				77ABAE82B7A3CCF1D45797AB /* Pods_grokHTMLAndDownloads.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -94,8 +96,8 @@
 		5FBEBF5F8263BA0AF127D524 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CB0812A4F6067F490C7A846A /* Pods.debug.xcconfig */,
-				B27C4FFE33CC50384492C19C /* Pods.release.xcconfig */,
+				520219523C1062D00AA631C0 /* Pods-grokHTMLAndDownloads.debug.xcconfig */,
+				E67DB91C874177AC2B9BAD0C /* Pods-grokHTMLAndDownloads.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -162,12 +164,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF1E688D1BCC028D0085578C /* Build configuration list for PBXNativeTarget "grokHTMLAndDownloads" */;
 			buildPhases = (
-				64EA6EEF95217693C0A7F5EB /* Check Pods Manifest.lock */,
+				64EA6EEF95217693C0A7F5EB /* [CP] Check Pods Manifest.lock */,
 				CF1E685F1BCC028D0085578C /* Sources */,
 				CF1E68601BCC028D0085578C /* Frameworks */,
 				CF1E68611BCC028D0085578C /* Resources */,
-				75EAFE2D2CB289417FCABC57 /* Embed Pods Frameworks */,
-				FA0880A59353D088752F57C8 /* Copy Pods Resources */,
+				75EAFE2D2CB289417FCABC57 /* [CP] Embed Pods Frameworks */,
+				FA0880A59353D088752F57C8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -284,14 +286,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		64EA6EEF95217693C0A7F5EB /* Check Pods Manifest.lock */ = {
+		64EA6EEF95217693C0A7F5EB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,34 +301,34 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		75EAFE2D2CB289417FCABC57 /* Embed Pods Frameworks */ = {
+		75EAFE2D2CB289417FCABC57 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-grokHTMLAndDownloads/Pods-grokHTMLAndDownloads-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FA0880A59353D088752F57C8 /* Copy Pods Resources */ = {
+		FA0880A59353D088752F57C8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-grokHTMLAndDownloads/Pods-grokHTMLAndDownloads-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -431,6 +433,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LIBRARY_SEARCH_PATHS = "$(inherit)";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -469,6 +472,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LIBRARY_SEARCH_PATHS = "$(inherit)";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -477,7 +481,7 @@
 		};
 		CF1E688E1BCC028D0085578C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB0812A4F6067F490C7A846A /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 520219523C1062D00AA631C0 /* Pods-grokHTMLAndDownloads.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = grokHTMLAndDownloads/Info.plist;
@@ -489,7 +493,7 @@
 		};
 		CF1E688F1BCC028D0085578C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B27C4FFE33CC50384492C19C /* Pods.release.xcconfig */;
+			baseConfigurationReference = E67DB91C874177AC2B9BAD0C /* Pods-grokHTMLAndDownloads.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = grokHTMLAndDownloads/Info.plist;

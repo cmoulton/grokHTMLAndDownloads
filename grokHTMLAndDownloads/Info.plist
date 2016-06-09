@@ -30,7 +30,12 @@
 	<dict>
 		<key>NSExceptionDomains</key>
 		<dict>
-			<key>ocsdata.ncd.noaa.gov</key>
+			<key>charts.noaa.gov</key>
+			<dict>
+				<key>NSThirdPartyExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+			<key>www.charts.noaa.gov</key>
 			<dict>
 				<key>NSThirdPartyExceptionAllowsInsecureHTTPLoads</key>
 				<true/>
